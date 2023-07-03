@@ -14,7 +14,7 @@
         <Rectangle fx:id="playerPaddle" arcHeight="5.0" arcWidth="5.0" fill="#ff1f33" focusTraversable="true" height="90.0" layoutX="9.0" layoutY="155.0" stroke="BLACK" strokeType="INSIDE" width="10.0" />
         <Rectangle fx:id="aiPaddle" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="90.0" layoutX="581.0" layoutY="155.0" stroke="BLACK" strokeType="INSIDE" width="10.0" />
         <Circle fx:id="ball" fill="WHITE" layoutX="300.0" layoutY="200.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
-        <Line endX="10.0" endY="341.0" fill="WHITE" layoutX="290.0" layoutY="59.0" startX="10.0" startY="-59.0" stroke="WHITE" />
+        <Line endX="10.0" endY="341.0" fill="WHITE" layoutX="290.0" layoutY="59.0" opacity="0.0" startX="10.0" startY="-59.0" stroke="WHITE" />
         <Label fx:id="playerScore" alignment="TOP_RIGHT" contentDisplay="TOP" layoutX="124.0" layoutY="14.0" prefHeight="142.0" prefWidth="166.0" text="0" textFill="WHITE">
             <font>
                 <Font size="40.0" />

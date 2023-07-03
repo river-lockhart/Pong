@@ -314,7 +314,7 @@ public class GameplayControllerLoad implements Initializable {
     //moves ai up the screen as long as it's within the screen
     private void moveAiPaddleUp() {
         double currentAiPaddleY = aiPaddle.getLayoutY();
-        double newAiPaddleY = currentAiPaddleY - 3;
+        double newAiPaddleY = currentAiPaddleY - 4;
 
         if(newAiPaddleY >= 0) {
             aiPaddle.setLayoutY(newAiPaddleY);
@@ -324,7 +324,7 @@ public class GameplayControllerLoad implements Initializable {
     //moves ai down the screen as long as it's within the screen
     private void moveAiPaddleDown() {
         double currentAiPaddleY = aiPaddle.getLayoutY();
-        double newAiPaddleY = currentAiPaddleY + 3;
+        double newAiPaddleY = currentAiPaddleY + 4;
 
         if(newAiPaddleY + aiPaddle.getHeight() <= pane.getHeight()) {
             aiPaddle.setLayoutY(newAiPaddleY);

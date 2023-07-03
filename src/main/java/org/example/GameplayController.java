@@ -312,7 +312,7 @@ public class GameplayController implements Initializable {
     //moves ai up the screen as long as it's within the screen
     private void moveAiPaddleUp() {
         double currentAiPaddleY = aiPaddle.getLayoutY();
-        double newAiPaddleY = currentAiPaddleY - 3;
+        double newAiPaddleY = currentAiPaddleY - 4;
 
         if(newAiPaddleY >= 0) {
             aiPaddle.setLayoutY(newAiPaddleY);

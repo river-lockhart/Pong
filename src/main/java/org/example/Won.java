@@ -1,6 +1,8 @@
 package org.example;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -36,12 +38,16 @@ public class Won implements Initializable{
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
-        setBackground();
+        try {
+            setBackground();
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
         setMusic();
     }
 
     public void setMusic() {
-        musicFile = new File("./src/sounds/winsong.mp3");
+        musicFile = new File("src/main/java/org/example/sounds/winsong.mp3");
         musicMedia = new Media(musicFile.toURI().toString());
         playMusic = new MediaPlayer(musicMedia);
         playMusic.setOnEndOfMedia(new Runnable() {
@@ -53,8 +59,10 @@ public class Won implements Initializable{
     }
 
     //sets background image of the main menu
-    private void setBackground() {
-        Image wonImage = new Image("./images/won.png");
+    private void setBackground() throws FileNotFoundException {
+        String imagePath = "src/main/java/org/example/images/won.png";
+        FileInputStream inputStream = new FileInputStream(imagePath);
+        Image wonImage = new Image(inputStream);
         ImagePattern wonPattern = new ImagePattern(wonImage);
         BackgroundFill wonFill = new BackgroundFill(wonPattern, null, null);
         Background wonBackground = new Background(wonFill);
